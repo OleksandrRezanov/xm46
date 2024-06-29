@@ -1,0 +1,169 @@
+@import './styles/constants.scss';
+@import './styles/mixins.scss';
+
+.app {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 400;
+
+  background-color: $app-bg-color;
+  color: $app-text-color;
+
+  background-image:
+    url('./images/bg-gradient-img-1.png'),
+    url('./images/bg-gradient-img-2.png'),
+    url('./images/bg-looper-1.svg'),
+    url('./images/bg-looper-2.svg');
+  background-repeat: no-repeat;
+  background-position: right top 2000px, left top 3900px, right top 2800px, center bottom;
+  background-size: auto, auto, auto, contain;
+
+  @include onTablet {
+    background-image:
+      url('./images/bg-gradient-img-1.png'),
+      url('./images/bg-gradient-img-2.png'),
+      url('./images/bg-looper-2-tablet.svg');
+    background-position: right top 2400px, left top 4900px, center bottom 100px;
+    background-size: auto, auto, contain;
+  }
+
+  @include onMobile {
+    background-image:
+      url('./images/bg-gradient-img-1.png'),
+      url('./images/bg-gradient-img-2.png'),
+      url('./images/bg-looper-2-mobile.svg');
+    background-position: right -100px top 2900px, left -100px top 5300px, center bottom 450px;
+  }
+
+  &__wrapper {
+    max-width: 1440px;
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 0 130px;
+
+    @include onTablet {
+      max-width: 744px;
+      padding: 0 48px;
+    }
+
+    @include onMobile {
+      max-width: 375px;
+      padding: 0 16px;
+    }
+  }
+
+  &__hero {
+    background-image: url('../src/images/hero-bg.webp');
+    background-size: cover;
+
+    @include onTablet {
+      background-image: url('../src/images/hero-bg-tablet.webp');
+    }
+
+    @include onMobile {
+      background-image: url('../src/images/hero-bg-mobile.webp');
+    }
+  }
+
+  &__about-wrapper {
+    padding-bottom: 200px;
+
+    background-image: url('../src/images/star-img.svg');
+    background-repeat: no-repeat;
+    background-position: right 178px bottom 48px;
+
+    @include onTablet {
+      background:
+        url('../src/images/star-img.svg') no-repeat left 50px bottom 20px,
+        url('../src/images/About/coin.webp') no-repeat right -130px bottom;
+      background-size: 47px 46px, 396px 396px;
+    }
+
+    @include onMobile {
+      padding-bottom: 120px;
+
+      background-size: 47px 46px, 246px 246px;
+      background-position: left bottom 45px, right -85px bottom -55px;
+    }
+  }
+
+  &__services {
+    padding-bottom: 62px;
+
+    @include onMobile {
+      padding-bottom: 12px;
+    }
+  }
+
+  &__token {
+    padding-top: 76px;
+
+    background-image: url('../src/images/Token/coins-bg.webp');
+    background-repeat: no-repeat;
+
+    @include onTablet {
+      background-size: 97px 132px;
+    }
+
+    @include onMobile {
+      padding-top: 108px;
+      background-size: 82px 98px;
+    }
+  }
+
+  &__team {
+    background-image: url('./images/Team/coins.png');
+    background-repeat: no-repeat;
+    background-position: top right;
+
+    @include onTablet {
+      background-size: 130px 180px;
+    }
+
+    @include onMobile {
+      background-size: 90px 120px;
+    }
+  }
+
+  &__blog {
+    margin-top: 200px;
+
+    @include onTablet {
+      margin-top: 160px;
+    }
+
+    @include onMobile {
+      margin-top: 120px;
+    }
+  }
+
+  &__get-started {
+    padding-top: 200px;
+
+    @include onTablet {
+      padding-top: 160px;
+      overflow: hidden;
+    }
+
+    @include onMobile {
+      padding-top: 120px;
+    }
+  }
+
+  &__footer {
+    margin-top: 200px;
+
+    background-image: url('./images/Footer/bg-gradient-img.png');
+    background-repeat: no-repeat;
+    background-position: left bottom;
+
+    @include onTablet {
+      margin-top: 160px;
+    }
+
+    @include onMobile {
+      margin-top: 120px;
+    }
+  }
+}

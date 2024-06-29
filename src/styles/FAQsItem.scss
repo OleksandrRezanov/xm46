@@ -1,0 +1,64 @@
+@import './mixins.scss';
+@import './constants.scss';
+
+.answers-item {
+  position: relative;
+  padding: 20px 80px 20px 20px;
+  border-radius: 4px;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 10px;
+    padding: 1px;
+
+    background: $faq-item-border-gradient;
+    mask:
+      linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+    -webkit-mask:
+      linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+  }
+
+  &__wrapper {
+    text-align: left;
+  }
+
+
+  &__icon {
+    position: absolute;
+    right: 20px;
+    top: 28px;
+    width: 24px;
+    height: 24px;
+    background-image: url('../images/icons/close-icon.svg');
+    cursor: pointer;
+
+    transition-duration: $transition-duration;
+    transform: rotate(45deg);
+    transform-origin: center;
+
+  }
+
+  &__selected {
+    transform: rotate(0);
+  }
+
+  &__title {
+    max-width: 480px;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 26px;
+  }
+
+  &__answer {
+    text-align: left;
+    margin-top: 20px;
+  }
+}

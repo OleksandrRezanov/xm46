@@ -1,0 +1,87 @@
+@import './constants.scss';
+
+.button {
+  position: relative;
+  z-index: 1;
+  padding: 13px 32px;
+
+  overflow: hidden;
+  border: none;
+  border-radius: 10px;
+
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 22px;
+
+  color: $button-text-color;
+  background: $default-button-bg-color;
+  cursor: pointer;
+
+  &:hover {
+    background: $hover-button-bg-color;
+  }
+
+  &:active {
+    background: $default-button-bg-color;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 10px;
+    padding: 1px;
+
+    background: $default-button-border-color;
+    mask:
+      linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+    -webkit-mask:
+      linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+    // -webkit-mask-composite: xor;
+  }
+
+  &--large {
+    padding: 20px 48px;
+  }
+
+  &--disabled {
+    color: $disabled-button-text-color;
+    background: $disabled-button-bg-color;
+
+    &:hover {
+      color: $disabled-button-text-color;
+      background: $disabled-button-bg-color;
+    }
+  }
+
+  &--arrow {
+    position: relative;
+    padding-right: 49px;
+
+    &::after {
+      content: '';
+      position: absolute;
+      right: 32px;
+      top: 50%;
+      width: 7px;
+      height: 10px;
+
+      background-image: url('../images/icons/arrow-icon.svg');
+      background-position: center;
+
+      transform: translateY(-50%);
+    }
+  }
+
+  &__title {
+    position: relative;
+    z-index: 2;
+  }
+}

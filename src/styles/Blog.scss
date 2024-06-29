@@ -1,0 +1,119 @@
+@import './mixins.scss';
+@import './constants.scss';
+
+.blog {
+  text-align: center;
+
+  &__label {
+    margin-bottom: 4px;
+
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 26px;
+
+    color: $primary-color;
+  }
+
+  &__title {
+    margin-bottom: 24px;
+
+    font-size: 50px;
+    font-weight: 900;
+    line-height: 65px;
+
+    @include onTablet {
+      font-size: 40px;
+      line-height: 52px;
+    }
+
+    @include onMobile {
+      font-size: 32px;
+      line-height: 42px;
+    }
+  }
+
+  &__description {
+    max-width: 500px;
+    margin: 0 auto 100px;
+
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+
+    color: $description-text-color;
+
+    @include onTablet {
+      margin-bottom: 60px;
+      max-width: 571px;
+    }
+
+    @include onMobile {
+      margin-bottom: 40px;
+      max-width: 100%;
+    }
+  }
+
+  &__items {
+    display: flex;
+    gap: 20px;
+
+    @include onTablet {
+      flex-direction: column;
+      gap: 48px;
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__item-image {
+    width: 100%;
+  }
+
+  &__item-date {
+    position: relative;
+    width: 230px;
+    padding-bottom: 16px;
+    margin: 16px auto 0;
+
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+
+    color: $blog-item-date-color;
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 1px;
+      background: $default-button-bg-color;
+    }
+  }
+
+  &__item-title {
+    margin: 16px auto 0;
+    max-width: 243px;
+    flex-grow: 1;
+
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 26px;
+
+    color: $blog-item-title-color;
+
+    @include onTablet {
+      max-width: 100%;
+      text-align: center;
+    }
+  }
+
+  &__item-button {
+    margin-top: 24px;
+  }
+}

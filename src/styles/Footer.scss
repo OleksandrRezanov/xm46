@@ -1,0 +1,149 @@
+@import './mixins.scss';
+@import './constants.scss';
+
+.footer {
+  padding: 100px 0 135px;
+
+  @include onTablet {
+    padding-bottom: 92px;
+  }
+
+  @include onMobile {
+    padding: 50px 0 78px;
+  }
+
+  &__main {
+    display: flex;
+    gap: 163px;
+
+    @include onTablet {
+      gap: 26px;
+    }
+
+    @include onMobile {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+
+  &__info {
+    width: 380px;
+    text-align: left;
+
+    @include onMobile {
+      width: 100%;
+    }
+
+    @include onMobile {
+      text-align: center;
+    }
+  }
+
+  &__description {
+    margin: 32px 0;
+    max-width: 380px;
+
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+
+    color: $disabled-button-text-color;
+  }
+
+  &__form {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 24px;
+
+    @include onTablet {
+      margin-bottom: 70px;
+    }
+
+    @include onMobile {
+      margin-bottom: 0;
+    }
+  }
+
+  &__input {
+    padding: 17px 54px 17px 20px;
+    border-radius: 10px;
+    
+    border: none;
+    outline: none;
+  }
+
+  &__form-button {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    width: 24px;
+    height: 24px;
+
+    background-image: url('../images/icons/input-arrow.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+
+    transform: translateY(-50%);
+  }
+
+  &__nav {
+    margin-top: 80px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @include onTablet {
+      margin-top: 0;
+      align-items: center;
+    }
+  }
+
+  &__list {
+    display: flex;
+    gap: 24px;
+
+    @include onTablet {
+      flex-direction: column;
+    }
+  }
+
+  &__list-item {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+
+    cursor: pointer;
+  }
+
+  &__aditional {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include onMobile {
+      flex-direction: column;
+      gap: 46px;
+      align-items: center;
+      margin-top: 82px;
+    }
+  }
+  
+  &__license {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 17px;
+
+    color: $footer-license-text-color;
+  }
+
+  &__privacy {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+    text-align: right;
+
+    color: $footer-license-text-color;
+  }
+}

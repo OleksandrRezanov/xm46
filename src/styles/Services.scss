@@ -1,0 +1,123 @@
+@import './mixins.scss';
+@import './constants.scss';
+
+.services {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+
+  @include onTablet {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include onMobile {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 16px;
+  }
+
+  &__info {
+    @include onMobile {
+      margin-bottom: 24px;
+    }
+  }
+
+  &__info-label {
+    margin-bottom: 4px;
+
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 26px;
+
+    color: $primary-color;
+  }
+
+  &__info-title {
+    margin-bottom: 24px;
+
+    font-size: 50px;
+    font-weight: 900;
+    line-height: 65px;
+
+    @include onTablet {
+      margin-bottom: 12px;
+
+      font-size: 40px;
+      line-height: 52px;
+    }
+
+    @include onMobile {
+      font-size: 32px;
+      line-height: 42px;
+    }
+  }
+
+  &__info-description {
+    color: $description-text-color;
+
+    @include onMobile {
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+
+  &__item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 128px 24px 32px;
+    border-radius: 25px;
+
+    text-align: center;
+    background: $services-item-bg-gradient;
+
+    @include onTablet {
+      padding: 114px 18px 32px;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 20px;
+      left: 50%;
+      width: 100px;
+      height: 100px;
+
+      background-repeat: no-repeat;
+      background-position: top center;
+
+      transform: translateX(-50%);
+
+      @include onTablet {
+        top: 25px;
+        width: 66px;
+        height: 66px;
+        background-size: contain;
+      }
+    }
+
+    &--service::before {
+      background-image: url('../images/Services/bitcoin-service-icon.svg');
+    }
+
+    &--secure::before {
+      background-image: url('../images/Services/secure-icon.svg');
+    }
+
+    &--vallet::before {
+      background-image: url('../images/Services/vallet-icon.svg');
+    }
+  }
+
+  &__item-title {
+    margin-bottom: 16px;
+
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 42px;
+  }
+
+  &__item-description {
+    color: $description-text-color;
+  }
+}

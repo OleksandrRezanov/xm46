@@ -1,0 +1,47 @@
+$primary-color: #B982FF;
+
+$app-bg-color: #0B0B0F;
+$app-text-color: #FFFFFF;
+$button-text-color: #F8F9FA;
+$default-button-bg-color: linear-gradient(225deg, #18C8FF 14.89%, #933FFE 85.85%);
+$default-button-border-color: linear-gradient(180deg, #ffffff78 12.55%, #ffffff8b 42.51%, #ffffff63 78.66%);
+$hover-button-bg-color: linear-gradient(226.55deg, #18C8FF 7%, #933FFE 29.53%);
+$disabled-button-bg-color: #6E7584;
+$disabled-button-text-color: #CED4DA;
+$description-text-color: #E9ECEF;
+
+$about-bg-gradient: linear-gradient(97.94deg, rgba(41, 46, 75, 0.375) 0%, rgba(41, 46, 75, 0.175) 100%, rgba(48, 58, 120, 0.5) 100%),
+  radial-gradient(62.64% 89.41% at 0% 100%, rgba(61, 165, 245, 0.5) 0%, rgba(62, 69, 238, 0) 100%),
+  radial-gradient(53.39% 67.78% at 100% 0%, rgba(223, 29, 255, 0.5) 0%, rgba(72, 205, 255, 0) 100%);
+$about-border-gradient: linear-gradient(86.46deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
+
+$services-item-bg-gradient: linear-gradient(180deg, rgba(41, 46, 75, 0.375) 0%, rgba(48, 58, 120, 0.5) 100%),
+  linear-gradient(180deg, rgba(223, 29, 255, 0.2) 0%, rgba(72, 205, 255, 0) 100%);
+
+$token-card-odd-bg-gradient: linear-gradient(97.94deg, rgba(41, 46, 75, 0.225) 0%, rgba(37, 40, 58, 0.105) 100%, rgba(41, 46, 75, 0.105) 100%),
+radial-gradient(circle at top left, rgba(62, 238, 227, 0.5) 5%, rgba(62, 69, 238, 0) 50%),
+radial-gradient(circle at bottom right, rgba(223, 29, 255, 0.35) 5%, rgba(72, 205, 255, 0) 50%);
+
+$token-card-even-bg-gradient: linear-gradient(97.94deg, rgba(41, 46, 75, 0.225) 0%, rgba(37, 40, 58, 0.105) 100%, rgba(41, 46, 75, 0.105) 100%),
+radial-gradient(circle at bottom left, rgba(62, 238, 227, 0.5) 5%, rgba(62, 69, 238, 0) 30%),
+radial-gradient(circle at top right, rgba(223, 29, 255, 0.35) 5%, rgba(72, 205, 255, 0) 30%);
+
+$token-card-title-color: #E9EEF4;
+$token-card-description-color: #E8E8E8;
+
+$faq-item-border-gradient: linear-gradient(90deg, rgba(255, 255, 255, 0.04) 0%, rgba(255, 255, 255, 0.2) 48.42%, rgba(255, 255, 255, 0.04) 100%);
+
+$team-member-card-bg-gradient:
+linear-gradient(97.94deg, rgba(41, 46, 75, 0.375) 0%, rgba(41, 46, 75, 0.175) 100%, rgba(48, 58, 120, 0.5) 100%),
+radial-gradient(circle at bottom right, rgba(61, 165, 245, 0.5) 0%, rgba(62, 69, 238, 0) 55%),
+radial-gradient(circle at top left, rgba(223, 29, 255, 0.5) 0%, rgba(72, 205, 255, 0) 55%);
+
+$team-member-image-gradient: linear-gradient(1.51deg, #2A3A56 10.18%, rgba(42, 58, 86, 0) 37.48%);
+$team-member-info-bg: #B982FF99;
+
+$blog-item-date-color: #E2E2E2;
+$blog-item-title-color: #F0F0F0;
+
+$footer-license-text-color: #F1F3F54D;
+
+$transition-duration: 0.3s;

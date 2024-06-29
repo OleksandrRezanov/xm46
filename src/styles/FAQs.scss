@@ -1,0 +1,83 @@
+@import './mixins.scss';
+@import './constants.scss';
+
+.questions {
+  margin-top: 200px;
+  text-align: center;
+
+  @include onTablet {
+    margin-top: 160px;
+  }
+
+  @include onMobile {
+    margin-top: 120px;
+  }
+
+  &__label {
+    margin-bottom: 4px;
+
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 26px;
+
+    color: $primary-color;
+  }
+
+  &__title {
+    margin-bottom: 24px;
+
+    font-size: 50px;
+    font-weight: 900;
+    line-height: 65px;
+
+    @include onTablet {
+      font-size: 40px;
+      line-height: 52px;
+    }
+
+    @include onMobile {
+      font-size: 32px;
+      line-height: 42px;
+    }
+  }
+
+  &__description {
+    max-width: 713px;
+    margin: 0 auto 100px;
+
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+
+    color: $description-text-color;
+
+    @include onTablet {
+      margin-bottom: 60px;
+    }
+
+    @include onMobile {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    gap: 20px;
+
+    @include onTablet {
+      flex-direction: column;
+      gap: 30px;
+    }
+  }
+
+  &__body {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    @include onTablet {
+      width: 100%;
+    }
+  }
+}

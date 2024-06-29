@@ -1,0 +1,190 @@
+@import './mixins.scss';
+@import './constants.scss';
+
+.team {
+  padding-top: 200px;
+  text-align: center;
+
+  @include onTablet {
+    padding-top: 160px;
+  }
+
+  @include onMobile {
+    padding-top: 120px;
+  }
+
+  &__label {
+    margin-bottom: 4px;
+
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 26px;
+
+    color: $primary-color;
+  }
+
+  &__title {
+    margin-bottom: 24px;
+
+    font-size: 50px;
+    font-weight: 900;
+    line-height: 65px;
+
+    @include onTablet {
+      font-size: 40px;
+      line-height: 52px;
+    }
+
+    @include onMobile {
+      font-size: 32px;
+      line-height: 42px;
+    }
+  }
+
+  &__description {
+    max-width: 500px;
+    margin: 0 auto 100px;
+
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+
+    color: $description-text-color;
+
+    @include onTablet {
+      margin-bottom: 60px;
+      max-width: 571px;
+    }
+
+    @include onMobile {
+      margin-bottom: 40px;
+      max-width: 100%;
+    }
+  }
+
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+
+    @include onTablet {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include onMobile {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+  &__member-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 266px;
+    padding-top: 17px;
+    padding-bottom: 13px;
+    overflow: hidden;
+    box-sizing: border-box;
+    border-radius: 24px;
+
+    background: $team-member-card-bg-gradient;
+    cursor: pointer;
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      top: 0;
+      background: $team-member-image-gradient;
+    }
+  }
+
+  &__member-name {
+    margin-bottom: 5px;
+
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 26px;
+  }
+
+  &__member-image {
+    position: relative;
+    height: 100%;
+
+    & img {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      height: 100%;
+    }
+  }
+
+  &__member-info {
+    display: none;
+    position: absolute;
+    z-index: 5;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+
+    padding: 27px 36px;
+    background-color: $team-member-info-bg;
+
+    &--open {
+      display: block;
+    }
+  }
+
+  &__member-info-contacts {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__member-info-social {
+    width: 50px;
+    height: 50px;
+
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+
+    &--fb {
+      background-image: url('../images/Team/fb-icon.svg');
+    }
+
+    &--twitter {
+      background-image: url('../images/Team/twitter-icon.svg');
+    }
+
+    &--instagram {
+      background-image: url('../images/Team/instagram-icon.svg');
+    }
+
+    &--linkedin {
+      background-image: url('../images/Team/linkedin-icon.svg');
+    }
+  }
+
+  &__member-info-name {
+    margin-top: 40px;
+    margin-bottom: 16px;
+
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 26px;
+  }
+
+  &__member-info-body {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    text-align: center;
+
+    color: $description-text-color;
+  }
+}

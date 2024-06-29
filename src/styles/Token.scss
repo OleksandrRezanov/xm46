@@ -1,0 +1,156 @@
+@import './mixins.scss';
+@import './constants.scss';
+
+.token {
+  text-align: center;
+
+  &__info {
+    margin: 0 auto 100px;
+    max-width: 500px;
+
+    @include onTablet {
+      margin-bottom: 60px;
+    }
+
+    @include onMobile {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__info-label {
+    margin-bottom: 4px;
+
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 26px;
+
+    color: $primary-color;
+  }
+
+  &__info-title {
+    margin-bottom: 24px;
+
+    font-size: 50px;
+    font-weight: 900;
+    line-height: 65px;
+
+    @include onTablet {
+      font-size: 40px;
+      line-height: 52px;
+    }
+
+    @include onMobile {
+      font-size: 32px;
+      line-height: 42px;
+    }
+  }
+
+  &__info-description {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+
+    color: $description-text-color;
+
+    @include onMobile {
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+
+  &__cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+
+    @include onTablet {
+      grid-template-columns: repeat(1, 1fr);
+      justify-items: center;
+      gap: 32px;
+    }
+  }
+
+  &__card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 143px 38px 40px;
+    border-radius: 50px;
+    border: 1px solid $app-text-color;
+
+    text-align: center;
+
+    @include onTablet {
+      max-width: 380px;
+      box-sizing: border-box;
+    }
+
+    @include onMobile {
+      max-width: 343px;
+      padding: 143px 19px 40px;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 40px;
+      left: 50%;
+      width: 100px;
+      height: 100px;
+
+      background-repeat: no-repeat;
+      background-position: top center;
+
+      transform: translateX(-50%);
+    }
+
+    &--profit {
+      background: $token-card-odd-bg-gradient;
+
+      &::before {
+        background-image: url('../images/Token/profit-icon.svg');
+      }
+    }
+
+    &--support {
+      background: $token-card-even-bg-gradient;
+
+      &::before {
+        background-image: url('../images/Token/support-icon.svg');
+      }
+    }
+
+    &--confirmation {
+      background: $token-card-odd-bg-gradient;
+
+      &::before {
+        background-image: url('../images/Token/confirmation-icon.svg');
+      }
+    }
+  }
+
+  &__card-title {
+    margin-bottom: 16px;
+
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 42px;
+
+    color: $token-card-title-color;
+
+    @include onMobile {
+      font-size: 20px;
+      line-height: 26px;
+    }
+  }
+
+  &__card-description {
+    color: $token-card-description-color;
+
+    @include onMobile {
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+}
